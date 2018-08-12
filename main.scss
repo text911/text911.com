@@ -1,0 +1,111 @@
+/*main*/
+
+/*-----Variables-----*/
+
+//Fonts
+$font-stack: "Open Sans", Helvetica, Arial, sans-serif;
+
+//Font sizes
+$font-size-xs: .05em;
+$font-size-s: .707em;
+$font-size-m: 18px;
+$font-size-l: 1.414em;
+$font-size-xl: 1.999em;
+$font-size-xxl: 2.827em;
+$font-size-xxxl: 3.998em;
+
+//Spacing
+$spacing-xs: 4px;
+$spacing-s: 8px;
+$spacing-m: 16px;
+$spacing-l: 32px;
+$spacing-xl: 64px;
+$spacing-xxl: 128px;
+
+//Font weight
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+//Colors
+$black: hsl(223, 11%, 13%);
+
+$gray-100: hsl(217, 11%, 23%);
+$gray-20: hsl(216, 33%, 94%);
+$gray-10: hsl(216, 33%, 97%);
+
+$red-70: hsl(0, 87%, 39%);
+
+$sky-70: hsl(200, 92%, 23%);
+
+/*-----Styles-----*/
+
+//Basics
+body{
+	font-family: $font-stack;
+	color: $gray-100;
+	border-top: $spacing-xs solid $red-70;
+}
+
+section{
+	margin-bottom: $spacing-xl;
+}
+
+h1{
+	font-size: $font-size-xl;
+	font-weight: $font-weight-bold;
+	color: $black;
+}
+
+h2{
+	@extend h1;
+	font-size: $font-size-xl;
+	margin-bottom: $spacing-m;
+}
+
+p{
+	max-width: 72ch;
+	line-height: 1.5em;
+}
+
+//Forms
+input{
+	height: $spacing-xl;
+	font-size: $font-size-m;
+}
+
+button{
+	height: $spacing-xl;
+	font-size: $font-size-m;
+	color: white;
+	font-weight: $font-weight-bold;
+	border: none;
+	background-color: $sky-70;
+}
+
+//Header
+header{
+	background-color: $gray-20;
+	padding: $spacing-m 0 $spacing-m 0;
+}
+
+//Footer
+footer{
+	background-color: $gray-100;
+	height: 100px;
+}
+
+//Masthead
+.masthead{
+	padding: $spacing-xxl 0 $spacing-xxl 0;
+	background-color: $gray-10;
+
+	h2{
+		font-size: $font-size-xxl;
+	}
+}
+
+//Content
+.content{
+	background-color: $gray-20;
+	padding: $spacing-xl 0 0 0;
+}
