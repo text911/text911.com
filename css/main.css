@@ -3,7 +3,7 @@
 /*-----Styles-----*/
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  color: #343941;
+  color: #444b55;
   border-top: 4px solid #ba0d0d;
   font-size: 18px; }
 
@@ -24,16 +24,54 @@ p {
   line-height: 1.5em;
   margin-bottom: 16px; }
 
+a {
+  color: #114497;
+  text-decoration: none;
+  border-bottom: 1px solid #114497; }
+
+a:hover, a:focus {
+  color: #343941;
+  background-color: #85b2fa;
+  border-bottom: 1px solid #85b2fa; }
+
+a:focus {
+  outline: 2px dashed #114497;
+  outline-offset: 4px; }
+
+strong {
+  font-weight: 700; }
+
+label {
+  margin-bottom: 16px;
+  display: block;
+  font-weight: 700;
+  font-size: 1.414em; }
+
 input {
   height: 64px;
   font-size: 18px; }
+
+input:focus {
+  outline: 2px dashed #114497;
+  outline-offset: 4px; }
 
 button {
   height: 64px;
   font-size: 18px;
   color: white;
   border: none;
-  background-color: #054d71; }
+  background-color: #114497;
+  display: inline; }
+
+button:hover, button:focus {
+  background-color: #103570; }
+
+button:focus {
+  outline: 2px dashed #114497;
+  outline-offset: 4px; }
+
+button:active {
+  background-color: #15243c; }
 
 header {
   background-color: #f5f7fa;
@@ -42,7 +80,17 @@ header {
 
 footer {
   background-color: #343941;
-  height: 100px; }
+  height: 100px;
+  padding: 64px 0 64px 0; }
+  footer p {
+    color: white;
+    font-weight: 300; }
+  footer a {
+    color: white;
+    border-bottom: 1px solid white; }
+  footer a:hover, footer a:focus {
+    color: #1e2025;
+    background-color: white; }
 
 .masthead {
   padding: 128px 0 128px 0;

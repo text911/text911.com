@@ -26,24 +26,30 @@ $spacing-xxxl: 256px;
 //Font weight
 $font-weight-bold: 700;
 $font-weight-regular: 400;
+$font-weight-light: 300;
 
 //Colors
 $black: hsl(223, 11%, 13%);
 
 $gray-100: hsl(217, 11%, 23%);
+$gray-90: hsl(215, 11%, 30%);
 $gray-20: hsl(216, 33%, 94%);
 $gray-10: hsl(216, 33%, 97%);
 
 $red-70: hsl(0, 87%, 39%);
 
-$sky-70: hsl(200, 92%, 23%);
+$blue-40: hsl(217, 92%, 75%);
+$blue-80: hsl(217, 80%, 33%);
+$blue-90: hsl(217, 75%, 25%);
+$blue-100: hsl(218, 48%, 16%);
+
 
 /*-----Styles-----*/
 
 //Basics
 body{
 	font-family: $font-stack;
-	color: $gray-100;
+	color: $gray-90;
 	border-top: $spacing-xs solid $red-70;
 	font-size: $font-size-m;
 }
@@ -70,10 +76,44 @@ p{
 	margin-bottom: $spacing-m;
 }
 
+a{
+	color: $blue-80;
+	text-decoration: none;
+	border-bottom: 1px solid $blue-80;
+}
+
+a:hover{
+	color: $gray-100;
+	background-color: $blue-40;
+	border-bottom: 1px solid $blue-40;
+}
+
+a:focus{
+	@extend a:hover;
+	outline: 2px dashed $blue-80;
+	outline-offset: $spacing-xs;
+}
+
+strong{
+	font-weight: $font-weight-bold;
+}
+
 //Forms
+label{
+	margin-bottom: $spacing-m;
+	display: block;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-l;
+}
+
 input{
 	height: $spacing-xl;
 	font-size: $font-size-m;
+}
+
+input:focus{
+	outline: 2px dashed $blue-80;
+	outline-offset: $spacing-xs;
 }
 
 button{
@@ -82,7 +122,22 @@ button{
 	color: white;
 	//font-weight: $font-weight-bold;
 	border: none;
-	background-color: $sky-70;
+	background-color: $blue-80;
+	display: inline;
+}
+
+button:hover{
+	background-color: $blue-90;
+}
+
+button:focus{
+	@extend button:hover;
+	outline: 2px dashed $blue-80;
+	outline-offset: $spacing-xs;
+}
+
+button:active{
+	background-color: $blue-100;
 }
 
 //Header
@@ -96,6 +151,22 @@ header{
 footer{
 	background-color: $gray-100;
 	height: 100px;
+	padding: $spacing-xl 0 $spacing-xl 0;
+
+	p{
+		color: white;
+		font-weight: $font-weight-light;
+	}
+
+	a{
+		color: white;
+		border-bottom: 1px solid white;
+	}
+
+	a:hover{
+		color: $black;
+		background-color: white;
+	}
 }
 
 //Masthead
