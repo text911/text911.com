@@ -2,12 +2,13 @@
 /*-----Variables-----*/
 /*-----Styles-----*/
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #343941;
-  border-top: 4px solid #ba0d0d; }
+  border-top: 4px solid #ba0d0d;
+  font-size: 18px; }
 
 section {
-  margin-bottom: 64px; }
+  margin-bottom: 128px; }
 
 h1, h2 {
   font-size: 1.999em;
@@ -16,11 +17,12 @@ h1, h2 {
 
 h2 {
   font-size: 1.999em;
-  margin-bottom: 16px; }
+  margin-bottom: 32px; }
 
 p {
   max-width: 72ch;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  margin-bottom: 16px; }
 
 input {
   height: 64px;
@@ -30,13 +32,13 @@ button {
   height: 64px;
   font-size: 18px;
   color: white;
-  font-weight: 700;
   border: none;
   background-color: #054d71; }
 
 header {
-  background-color: #ebeff5;
-  padding: 16px 0 16px 0; }
+  background-color: #f5f7fa;
+  padding: 16px 0 16px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5); }
 
 footer {
   background-color: #343941;
@@ -44,10 +46,14 @@ footer {
 
 .masthead {
   padding: 128px 0 128px 0;
-  background-color: #f5f7fa; }
+  background-color: #f5f7fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c8d0e0' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E"); }
   .masthead h2 {
-    font-size: 2.827em; }
+    font-size: 3.998em;
+    line-height: 1.1em;
+    max-width: 800px;
+    margin-bottom: 64px; }
 
 .content {
-  background-color: #ebeff5;
+  background-color: #f5f7fa;
   padding: 64px 0 0 0; }
