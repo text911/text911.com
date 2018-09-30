@@ -65,6 +65,14 @@ background:$blue-40;
 color: $gray-100;
 }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
 	font-family: $font-stack;
 	color: $gray-90;
@@ -158,7 +166,8 @@ button{
 	//font-weight: $font-weight-bold;
 	border: none;
 	background-color: $blue-80;
-	display: inline;
+	display: inline-block;
+	border-radius: 0 2px 2px 0;
 }
 
 button:hover{
@@ -180,6 +189,34 @@ header{
 	background-color: $gray-10;
 	padding: $spacing-m 0 $spacing-m 0;
 	box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
+	background-color: $gray-20;
+
+	label{
+		margin-bottom: $spacing-m;
+		display: inline-block;
+		font-weight: $font-weight-bold;
+		font-size: $font-size-m;
+	}
+
+	input{
+		height: $spacing-l;
+		font-size: $font-size-m;
+	}
+
+	input:focus{
+		outline: 2px dashed $blue-80;
+		outline-offset: $spacing-xs;
+	}
+
+	button{
+		height: $spacing-l;
+		font-size: $font-size-m;
+		color: white;
+		//font-weight: $font-weight-bold;
+		border: none;
+		background-color: $blue-80;
+		display: inline-block;
+	}
 }
 
 //Footer
@@ -220,33 +257,6 @@ footer{
 
 .masthead-results{
 	padding: $spacing-l 0 $spacing-l 0;
-
-	label{
-		margin-bottom: $spacing-m;
-		display: inline;
-		font-weight: $font-weight-bold;
-		font-size: $font-size-m;
-	}
-
-	input{
-		height: $spacing-l;
-		font-size: $font-size-m;
-	}
-
-	input:focus{
-		outline: 2px dashed $blue-80;
-		outline-offset: $spacing-xs;
-	}
-
-	button{
-		height: $spacing-l;
-		font-size: $font-size-m;
-		color: white;
-		//font-weight: $font-weight-bold;
-		border: none;
-		background-color: $blue-80;
-		display: inline;
-	}
 }
 
 //Content
@@ -272,4 +282,21 @@ footer{
 .result-no{
 	background-color: $red-70;
 	color: white;
+}
+
+//Icons
+.heroicon-component-fill{
+	fill: white;
+}
+
+.heroicon-component-accent{
+	fill: $red-70;
+}
+
+.heroicon-shadows{
+	fill: $gray-90;
+}
+
+.heroicon-outline{
+	fill: $gray-100;
 }

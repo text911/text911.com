@@ -13,6 +13,13 @@
   background: #85b2fa;
   color: #343941; }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   color: #444b55;
@@ -85,7 +92,8 @@ button {
   color: white;
   border: none;
   background-color: #114497;
-  display: inline; }
+  display: inline-block;
+  border-radius: 0 2px 2px 0; }
 
 button:hover, button:focus {
   background-color: #103570; }
@@ -100,7 +108,26 @@ button:active {
 header {
   background-color: #f5f7fa;
   padding: 16px 0 16px 0;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  background-color: #ebeff5; }
+  header label {
+    margin-bottom: 16px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px; }
+  header input {
+    height: 32px;
+    font-size: 18px; }
+  header input:focus {
+    outline: 2px dashed #114497;
+    outline-offset: 4px; }
+  header button {
+    height: 32px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    background-color: #114497;
+    display: inline-block; }
 
 footer {
   background-color: #343941;
@@ -129,24 +156,6 @@ footer {
 
 .masthead-results {
   padding: 32px 0 32px 0; }
-  .masthead-results label {
-    margin-bottom: 16px;
-    display: inline;
-    font-weight: 700;
-    font-size: 18px; }
-  .masthead-results input {
-    height: 32px;
-    font-size: 18px; }
-  .masthead-results input:focus {
-    outline: 2px dashed #114497;
-    outline-offset: 4px; }
-  .masthead-results button {
-    height: 32px;
-    font-size: 18px;
-    color: white;
-    border: none;
-    background-color: #114497;
-    display: inline; }
 
 .content {
   background-color: #f5f7fa;
@@ -167,3 +176,15 @@ footer {
 .result-no {
   background-color: #ba0d0d;
   color: white; }
+
+.heroicon-component-fill {
+  fill: white; }
+
+.heroicon-component-accent {
+  fill: #ba0d0d; }
+
+.heroicon-shadows {
+  fill: #444b55; }
+
+.heroicon-outline {
+  fill: #343941; }
